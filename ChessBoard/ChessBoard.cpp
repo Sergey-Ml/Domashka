@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 int main() {
 	//setlocale(LC_ALL, "Russian");
@@ -17,11 +17,11 @@ int main() {
 	cout << " Tut v planah byli shahmatnye figury,\n";
 	cout << " no ne pobedil Unicode, a v ASCII ih net \n\n";
 	cout << "  ";
-	cout << "   "; //ñäâèã âåðõ ñòðîêè áóêâ
+	cout << "   "; //ÑÐ´Ð²Ð¸Ð³ Ð²ÐµÑ€Ñ… ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð±ÑƒÐºÐ²
 	for (char lit = 97; lit <= razmer + 96; lit++)
 		cout << " " << lit;
 	cout << "\n";
-	cout << "     "; //ñäâèã âåðõíåé îêîíòîâêè
+	cout << "     "; //ÑÐ´Ð²Ð¸Ð³ Ð²ÐµÑ€Ñ…Ð½ÐµÐ¹ Ð¾ÐºÐ¾Ð½Ñ‚Ð¾Ð²ÐºÐ¸
 	cout << char(201);
 	for (int y = 1; y <= razmer * 2; y++) {
 		cout << char(205);
@@ -32,12 +32,12 @@ int main() {
 	{
 		if (i < 10) {
 			cout << " " << i;
-			cout << "   "; //ñäâèã âñåé òàáëèöû
+			cout << "   "; //ÑÐ´Ð²Ð¸Ð³ Ð²ÑÐµÐ¹ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹
 		}
 		else
 		{
 			cout << " " << i;
-			cout << "  ";//ñäâèã âñåé òàáëòöû
+			cout << "  ";//ÑÐ´Ð²Ð¸Ð³ Ð²ÑÐµÐ¹ Ñ‚Ð°Ð±Ð»Ñ‚Ñ†Ñ‹
 		}
 		cout << char(186);
 		for (j = 1; j <= razmer / 2; j++)
@@ -56,7 +56,7 @@ int main() {
 		cout << "" << i;
 		cout << "\n";
 	}
-	cout << "     "; //ñäâèã íèæíåé îîíòîâêè
+	cout << "     "; //ÑÐ´Ð²Ð¸Ð³ Ð½Ð¸Ð¶Ð½ÐµÐ¹ Ð¾Ð¾Ð½Ñ‚Ð¾Ð²ÐºÐ¸
 	cout << char(200);
 	for (int y = 1; y <= razmer * 2; y++)
 	{
@@ -64,7 +64,7 @@ int main() {
 	}
 	cout << char(188);
 	cout << "\n";
-	cout << "     "; //ñäâèã íèæíåé ñòðîêè áóêâ
+	cout << "     "; //ÑÐ´Ð²Ð¸Ð³ Ð½Ð¸Ð¶Ð½ÐµÐ¹ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð±ÑƒÐºÐ²
 	for (char lit = 97; lit <= razmer + 96; lit++)
 		cout << " " << lit;
 	cout << "\n";
@@ -73,6 +73,6 @@ int main() {
 	cout << "v nabor bukv, vybor razmera kratnogo 2 obuslovlen\n";
 	cout << "krasotoy doski: odin kvadratik - dva simvola\n";
 	cout << "zato if-for-while vyuchil!!!";
-	//cout << "\u2658"; //ÊÀÊ ÌÍÅ ÂÛÂÅÑÒÈ ØÀÕÌÀÒÍÛÅ ÔÈÃÓÐÊÈ ??????!!!!!
+	//cout << "\u2658"; //ÐšÐÐš ÐœÐÐ• Ð’Ð«Ð’Ð•Ð¡Ð¢Ð˜ Ð¨ÐÐ¥ÐœÐÐ¢ÐÐ«Ð• Ð¤Ð˜Ð“Ð£Ð ÐšÐ˜ ??????!!!!!
 	cout << "\n\n\n\n\n\n";
 }
