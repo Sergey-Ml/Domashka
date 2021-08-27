@@ -1,14 +1,25 @@
-#include<iostream>
-#include<conio.h>
+﻿#include<iostream>
 using namespace std;
 int main()
 {
-char key;
-int i;
-	for (i = 1; i < 256; i++)
-	{
-			key = i;
-			cout << key << "\t";
-		}
-}
+	setlocale(LC_ALL, "Russian");
+	int razmer = 5, i, j;
+	//cout << "Введите размер доски :\n";
+//cin >> razmer;
+//cout << "\n";
 
+	for (i = 0; i < razmer; i++) //строк
+	{
+		for (j = 0; j < razmer; j++) //столб
+		{
+			for (int x = 0; x < razmer; x++) 
+			{
+				if ((i + j) % 2 == 0)
+					cout << " * ";
+				else
+					cout << "   ";
+			}
+		}
+		cout << "\n\n";
+	}
+}
