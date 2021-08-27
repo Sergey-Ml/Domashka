@@ -1,16 +1,16 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 int main() {
 	setlocale(LC_ALL, "Russian");
 	int razmer, i, j, k, x;
-	cout << "Ââåäèòå ðàçìåð äîñêè :\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð´Ð¾ÑÐºÐ¸ :\n";
 	cin >> razmer;
 
 	for (k = 0; k < razmer; k++)
 	{
-		for (i = 0; i < razmer; i++) //ñòðîêè
+		for (i = 0; i < razmer; i++) //ÑÑ‚Ñ€Ð¾ÐºÐ¸
 		{
-			for (j = 0; j < razmer; j++) //ñòîëáö
+			for (j = 0; j < razmer; j++) //ÑÑ‚Ð¾Ð»Ð±Ñ†
 			{
 				for (x = 0; x < razmer; x++)
 				{
