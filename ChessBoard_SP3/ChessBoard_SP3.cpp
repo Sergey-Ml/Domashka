@@ -12,7 +12,7 @@ int main() {
 	cout << "   "; //сдвиг верхней оконтовки
 	setlocale(LC_ALL, "C");
 	cout << char(201);
-	for (int y = 1; y <= razmer * razmer * 2; y++)
+	for (int y = 1; y <= razmer * razmer * 2+razmer; y++)
 		cout << char(205);
 	cout << char(187);
 	cout << "\n";
@@ -25,7 +25,7 @@ int main() {
 			cout << char(186);
 			for (j = 0; j < razmer; j++) //столбц
 				{
-				
+				cout << char(179);
 				for (x = 0; x < razmer / 2; x++)
 				
 				{
@@ -64,7 +64,7 @@ int main() {
 	}
 	cout << "   ";
 	cout << char(200);
-	for (int y = 1; y <= razmer * razmer * 2; y++)
+	for (int y = 1; y <= razmer * razmer * 2+razmer; y++)
 	{
 		cout << char(205);
 	}
