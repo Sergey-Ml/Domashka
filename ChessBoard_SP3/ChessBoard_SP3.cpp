@@ -23,13 +23,11 @@ int main() {
 		{
 			cout << "   ";
 			cout << char(186);
-
 			for (j = 0; j < razmer; j++) //столбц
-
-			{
-
-				for (x = 0; x < razmer/2; x++)
-
+				{
+				
+				for (x = 0; x < razmer / 2; x++)
+				
 				{
 
 					if ((k + j) % 2 == 0)
