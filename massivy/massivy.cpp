@@ -39,14 +39,14 @@ int main()
 				break;
 			}
 			{
-				cout << OFFSET << "=================================================++=====\n\n";
+				cout << OFFSET << "========================================================\n\n";
 				cout << OFFSET << "          Вывод массива в прямом порядке \n\n";
 				cout << OFFSET << "======================================================\n\n\n";
-				cout << OFFSET << "               Введите размер массива\n                     ";
+				cout << OFFSET << "          Введите размер массива (не больше 100):\n         ";
 				int razm;
 				cin >> razm;
 				const int size = 100;
-				int array[size] = { 0 };
+				float array[size] = { 0 };
 				for (int i = 0; i < razm; i++)
 				{
 					cout <<"Введите элементы массива:\n";
@@ -74,14 +74,14 @@ int main()
 				break;
 			}
 			{
-				cout << OFFSET << "=================================================++=====\n\n";
+				cout << OFFSET << "========================================================\n\n";
 				cout << OFFSET << "          Вывод массива в обратном порядке \n\n";
 				cout << OFFSET << "======================================================\n\n\n";
-				cout << OFFSET << "               Введите размер массива\n                     ";
+				cout << OFFSET << "          Введите размер массива (не больше 100):\n         ";
 				int razm;
 				cin >> razm;
 				const int size = 100;
-				int array[size] = { 0 };
+				float array[size] = { 0 };
 				for (int i = 0; i < razm; i++)
 				{
 					cout << "Введите элементы массива:\n";
@@ -89,7 +89,7 @@ int main()
 				}
 				cout << OFFSET << "-----------------------\n\n";
 				cout << "Обратный вывод: ";
-				int b;
+				float b;
 				for (int i = 0; i < (razm / 2); i++)
 				{
 					b = array[razm - i - 1];
@@ -102,6 +102,82 @@ int main()
 					cout << array[i] << " ";
 				}
 
+				cout << endl;
+
+
+			}
+		}
+		// Задача 3
+		if (otvet == 3)
+		{
+			if (otvet == 27 - 48)
+			{
+				cout << "Выход" << endl;
+				break;
+			}
+			{
+				cout << OFFSET << "========================================================\n\n";
+				cout << OFFSET << "          Найти сумму элементов массива  \n\n";
+				cout << OFFSET << "======================================================\n\n\n";
+				cout << OFFSET << "        Введите размер массива (не больше 100):\n            ";
+				int razm;
+				cin >> razm;
+				const int size = 100;
+				float array[size] = { 0 };
+				for (int i = 0; i < razm; i++)
+				{
+					cout << "Введите элементы массива:\n";
+					cin >> array[i];
+				}
+				cout << OFFSET << "-----------------------\n\n";
+				cout << "Сумма элементов массива: ";
+				float summa=0;
+				
+				for (int i = 0; i < razm; i++)
+				{
+					
+					summa += array[i];
+				}
+				cout << summa;
+				cout << endl;
+
+
+			}
+		}
+		// Задача 4
+		if (otvet == 4)
+		{
+			if (otvet == 27 - 48)
+			{
+				cout << "Выход" << endl;
+				break;
+			}
+			{
+				cout << OFFSET << "========================================================\n\n";
+				cout << OFFSET << "        Найти среднее арифметическое элементов массива  \n\n";
+				cout << OFFSET << "======================================================\n\n\n";
+				cout << OFFSET << "        Введите размер массива (не больше 100):\n            ";
+				int razm;
+				cin >> razm;
+				const int size = 100;
+				float array[size] = { 0 };
+				for (int i = 0; i < razm; i++)
+				{
+					cout << "Введите элементы массива:\n";
+					cin >> array[i];
+				}
+				cout << OFFSET << "-----------------------\n\n";
+				cout << "Cреднее арифметическое элементов массива: ";
+				float summa = 0, srednee;
+
+				for (int i = 0; i < razm; i++)
+				{
+
+					summa += array[i];
+
+				}
+				srednee = summa / razm;
+				cout << srednee;
 				cout << endl;
 
 
