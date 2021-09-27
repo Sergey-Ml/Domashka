@@ -2,6 +2,7 @@
 #include<conio.h>
 using namespace std;
 #define OFFSET "\t\t\t\t"
+//#define ZD_6
 
 int main()
 {
@@ -228,6 +229,42 @@ int main()
 
 			}
 		}
+#ifdef ZD_6
+
+		// Задача 6
+		if (otvet == 6)
+		{
+			if (otvet == 27 - 48)
+			{
+				cout << "Выход" << endl;
+				break;
+			}
+			{
+				cout << OFFSET << "========================================================\n\n";
+				cout << OFFSET << "          Циклический сдвиг \n\n";
+				cout << OFFSET << "======================================================\n\n\n";
+				cout << OFFSET << "          Введите число сдвига :\n         ";
+				int sdvig;
+				cin >> sdvig;
+				const int size = 10;
+				int array[size] = {1,2,3,4,5,6,7,8,9,10};
+				float b;
+				for (int i = 0; i < sdvig; i++)
+				{
+					array[0] = array[size-i];
+				}
+
+				for (int i = 0; i < size; i++)
+				{
+					cout << array[i] << " ";
+				}
+
+				cout << endl;
+
+
+			}
+		}
+#endif
 		key = _getch();
     } while (key != 27);
 	
