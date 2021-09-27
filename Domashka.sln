@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_1", "DZ_1", "{B6523C0F-469F-47DE-9ED0-BB768C569D4F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_1-Elochka", "DZ_1-Elochka", "{B6523C0F-469F-47DE-9ED0-BB768C569D4F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elochka", "Elochka\Elochka.vcxproj", "{C798ED8F-6124-4A30-AEED-98FA788842C1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_2", "DZ_2", "{63546EB8-5E3F-42C2-8F52-3E374A38A5ED}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_2-Dacha-Pokupki", "DZ_2-Dacha-Pokupki", "{63546EB8-5E3F-42C2-8F52-3E374A38A5ED}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stoim_pokupki", "Stoim_pokupki\Stoim_pokupki.vcxproj", "{5BE0BD8D-17BC-43BE-9493-033D66FF6E34}"
 EndProject
@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stoim_pokupk_2", "Stoim_pok
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Poezdka_na_Dachu", "Poezdka_na_Dachu\Poezdka_na_Dachu.vcxproj", "{1F4556FB-7C1F-40E7-A5AD-D5BD5BED5A4C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_3", "DZ_3", "{A58A17DF-734F-48FC-B4E8-A0684236CD41}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_3-Calculyator", "DZ_3-Calculyator", "{A58A17DF-734F-48FC-B4E8-A0684236CD41}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calkulyator", "Calkulyator\Calkulyator.vcxproj", "{D9A2B8D0-6F9C-47E1-85F3-1DC28C3A47A5}"
 EndProject
@@ -23,7 +23,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Palindrom", "Palindrom\Pali
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3DShooter", "3DShooter\3DShooter.vcxproj", "{B041702D-5D4E-46F3-89B6-60D50703FEB2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_4", "DZ_4", "{C5E8861C-0ED4-4F9D-B2C0-A538ACE7AE5F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_4-tablicy_umnozh_pifag_ascii", "DZ_4-tablicy_umnozh_pifag_ascii", "{C5E8861C-0ED4-4F9D-B2C0-A538ACE7AE5F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DZ_4", "Tabl_Umnozhen\Tabl_Umnozhen.vcxproj", "{B6F2727A-866F-4536-8BE7-DD4F12CC1941}"
 EndProject
@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9539C0BD-D
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{0E172C4A-E77F-46C8-874E-00DFC868A438}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_5", "DZ_5", "{68084E28-AC36-440E-98CE-110677DE84E7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_5-shachmatnye_doski", "DZ_5-shachmatnye_doski", "{68084E28-AC36-440E-98CE-110677DE84E7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChessBoard", "ChessBoard\ChessBoard.vcxproj", "{A3F6029F-E9C0-48A2-AAAB-EC8AE4DB1EF8}"
 EndProject
@@ -44,6 +44,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChessBoard_SP3", "ChessBoard_SP3\ChessBoard_SP3.vcxproj", "{548A874B-5665-4FD8-BD77-519338C7482C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChessBoard_SP4", "ChessBoard_SP4\ChessBoard_SP4.vcxproj", "{A498C88D-273C-4F7A-9F12-BE64A8AACCEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DZ_6-massivy", "DZ_6-massivy", "{558F84DF-EB3B-4C63-9894-2EC117CE68AA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "massivy", "massivy\massivy.vcxproj", "{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +177,14 @@ Global
 		{A498C88D-273C-4F7A-9F12-BE64A8AACCEB}.Release|x64.Build.0 = Release|x64
 		{A498C88D-273C-4F7A-9F12-BE64A8AACCEB}.Release|x86.ActiveCfg = Release|Win32
 		{A498C88D-273C-4F7A-9F12-BE64A8AACCEB}.Release|x86.Build.0 = Release|Win32
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Debug|x64.ActiveCfg = Debug|x64
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Debug|x64.Build.0 = Debug|x64
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Debug|x86.ActiveCfg = Debug|Win32
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Debug|x86.Build.0 = Debug|Win32
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Release|x64.ActiveCfg = Release|x64
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Release|x64.Build.0 = Release|x64
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Release|x86.ActiveCfg = Release|Win32
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,6 +205,7 @@ Global
 		{B1769C46-B9A5-4D51-BE15-C79FC1CC4D70} = {68084E28-AC36-440E-98CE-110677DE84E7}
 		{548A874B-5665-4FD8-BD77-519338C7482C} = {68084E28-AC36-440E-98CE-110677DE84E7}
 		{A498C88D-273C-4F7A-9F12-BE64A8AACCEB} = {68084E28-AC36-440E-98CE-110677DE84E7}
+		{9EA7DDA8-86BF-423B-95F2-2770E1300AD2} = {558F84DF-EB3B-4C63-9894-2EC117CE68AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {046AD63B-7121-45FB-8FEE-81FCF07C9F55}
