@@ -183,6 +183,51 @@ int main()
 
 			}
 		}
+		// Задача 5
+		if (otvet == 5)
+		{
+			if (otvet == 27 - 48)
+			{
+				cout << "Выход" << endl;
+				break;
+			}
+			{
+				cout << OFFSET << "=================================================++=====\n\n";
+				cout << OFFSET << "   Найти минимальное и максимальное значение в массиве  \n\n";
+				cout << OFFSET << "======================================================\n\n\n";
+				cout << OFFSET << "        Введите размер массива (не больше 100):\n            ";
+				int razm;
+				cin >> razm;
+				const int size = 100;
+				float array[size] = { 0 };
+				for (int i = 0; i < razm; i++)
+				{
+					cout << "Введите элементы массива:\n";
+					cin >> array[i];
+				}
+				cout << OFFSET << "-----------------------\n\n";
+				cout << "Минимальное значение в массиве: ";
+
+				for (int i = 0; i < razm; i++)
+				{
+					if (array[0] > array[i])
+						array[0] = array[i];
+				}
+				cout << array[0];
+				cout << endl;
+				cout << "Максимальное значение в массиве: ";
+				
+				for (int i = 0; i < razm; i++)
+				{
+					if (array[0] < array[i])
+						array[0] = array[i];
+				}
+				cout << array[0];
+				cout << endl;
+
+
+			}
+		}
 		key = _getch();
     } while (key != 27);
 	
