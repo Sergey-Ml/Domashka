@@ -2,7 +2,6 @@
 #include<conio.h>
 using namespace std;
 #define OFFSET "\t\t\t\t"
-#define ZD_1
 
 int main()
 {
@@ -30,6 +29,8 @@ int main()
 		
 		
 		otvet = _getch() - 48;
+		
+		// Задача 1
 		if (otvet == 1)
 		{
 			if (otvet == 27 - 48)
@@ -37,7 +38,6 @@ int main()
 				cout << "Выход" << endl;
 				break;
 			}
-#ifdef ZD_1
 			{
 				cout << OFFSET << "=================================================++=====\n\n";
 				cout << OFFSET << "          Вывод массива в прямом порядке \n\n";
@@ -61,7 +61,50 @@ int main()
 				}
 
 				cout << endl;
-#endif //ZD_1
+
+
+			}
+		}
+		// Задача 2
+		if (otvet == 2)
+		{
+			if (otvet == 27 - 48)
+			{
+				cout << "Выход" << endl;
+				break;
+			}
+			{
+				cout << OFFSET << "=================================================++=====\n\n";
+				cout << OFFSET << "          Вывод массива в обратном порядке \n\n";
+				cout << OFFSET << "======================================================\n\n\n";
+				cout << OFFSET << "               Введите размер массива\n                     ";
+				int razm;
+				cin >> razm;
+				const int size = 100;
+				int array[size] = { 0 };
+				for (int i = 0; i < razm; i++)
+				{
+					cout << "Введите элементы массива:\n";
+					cin >> array[i];
+				}
+				cout << OFFSET << "-----------------------\n\n";
+				cout << "Обратный вывод: ";
+				int b;
+				for (int i = 0; i < (razm / 2); i++)
+				{
+					b = array[razm - i - 1];
+					array[razm - i - 1] = array[i];
+					array[i] = b;
+				}
+				
+				for (int i = 0; i < razm; i++)
+				{
+					cout << array[i] << " ";
+				}
+
+				cout << endl;
+
+
 			}
 		}
 		key = _getch();

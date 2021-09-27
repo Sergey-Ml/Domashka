@@ -14,8 +14,14 @@ int main()
 		cin >> array[i];
 	}
 	cout << "-----------------------\n\n";
-	cout << "Прямой вывод: ";
-
+	cout << "Обратный вывод: ";
+	int b;
+	for (int i = 0; i < (razm / 2); i++)
+	{
+		b = array[razm - i - 1];
+		array[razm - i - 1] = array[i];
+			array[i] = b;
+	}
 	for (int i = 0; i < razm; i++)
 	{
 		cout << array[i] << " ";
