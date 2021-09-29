@@ -2,7 +2,7 @@
 #include<conio.h>
 using namespace std;
 #define OFFSET "\t\t\t\t"
-//#define ZD_6
+#define ZD_6
 
 int main()
 {
@@ -27,10 +27,10 @@ int main()
 		cout << OFFSET << "6.    Циклический сдвиг \n\n";
 		cout << OFFSET << "Esc.  Выход\n\n";
 		cout << OFFSET << "======================================================\n\n\n";
-		
-		
+
+
 		otvet = _getch() - 48;
-		
+
 		// Задача 1
 		if (otvet == 1)
 		{
@@ -46,19 +46,25 @@ int main()
 				cout << OFFSET << "          Введите размер массива (не больше 100):\n         ";
 				int razm;
 				cin >> razm;
+				while (razm > 100 || razm <= 0)
+				{
+					cout << "Размер массива может быть от 1 до 100!" << endl;
+					cout << "Введите снова: ";
+					cin >> razm;
+				}
 				const int size = 100;
 				float array[size] = { 0 };
 				for (int i = 0; i < razm; i++)
 				{
-					cout <<"Введите элементы массива:\n";
+					cout << "Введите элементы массива:\n";
 					cin >> array[i];
 				}
-				cout <<OFFSET    << "-----------------------\n\n";
-				cout <<"Прямой вывод: ";
+				cout <<"-----------------------\n\n";
+				cout << "Прямой вывод: ";
 
 				for (int i = 0; i < razm; i++)
 				{
-					cout<< array[i] << " ";
+					cout << array[i] << " ";
 				}
 
 				cout << endl;
@@ -81,6 +87,12 @@ int main()
 				cout << OFFSET << "          Введите размер массива (не больше 100):\n         ";
 				int razm;
 				cin >> razm;
+				while (razm > 100 || razm <= 0)
+				{
+					cout << "Размер массива может быть от 1 до 100!" << endl;
+					cout << "Введите снова: ";
+					cin >> razm;
+				}
 				const int size = 100;
 				float array[size] = { 0 };
 				for (int i = 0; i < razm; i++)
@@ -88,7 +100,7 @@ int main()
 					cout << "Введите элементы массива:\n";
 					cin >> array[i];
 				}
-				cout << OFFSET << "-----------------------\n\n";
+				cout <<"-----------------------\n\n";
 				cout << "Обратный вывод: ";
 				float b;
 				for (int i = 0; i < (razm / 2); i++)
@@ -97,7 +109,7 @@ int main()
 					array[razm - i - 1] = array[i];
 					array[i] = b;
 				}
-				
+
 				for (int i = 0; i < razm; i++)
 				{
 					cout << array[i] << " ";
@@ -123,6 +135,12 @@ int main()
 				cout << OFFSET << "        Введите размер массива (не больше 100):\n            ";
 				int razm;
 				cin >> razm;
+				while (razm > 100 || razm <= 0)
+				{
+					cout << "Размер массива может быть от 1 до 100!" << endl;
+					cout << "Введите снова: ";
+					cin >> razm;
+				}
 				const int size = 100;
 				float array[size] = { 0 };
 				for (int i = 0; i < razm; i++)
@@ -130,13 +148,13 @@ int main()
 					cout << "Введите элементы массива:\n";
 					cin >> array[i];
 				}
-				cout << OFFSET << "-----------------------\n\n";
+				cout << "-----------------------\n\n";
 				cout << "Сумма элементов массива: ";
-				float summa=0;
-				
+				float summa = 0;
+
 				for (int i = 0; i < razm; i++)
 				{
-					
+
 					summa += array[i];
 				}
 				cout << summa;
@@ -160,6 +178,12 @@ int main()
 				cout << OFFSET << "        Введите размер массива (не больше 100):\n            ";
 				int razm;
 				cin >> razm;
+				while (razm > 100 || razm <= 0)
+				{
+					cout << "Размер массива может быть от 1 до 100!" << endl;
+					cout << "Введите снова: ";
+					cin >> razm;
+				}
 				const int size = 100;
 				float array[size] = { 0 };
 				for (int i = 0; i < razm; i++)
@@ -167,7 +191,7 @@ int main()
 					cout << "Введите элементы массива:\n";
 					cin >> array[i];
 				}
-				cout << OFFSET << "-----------------------\n\n";
+				cout <<"-----------------------\n\n";
 				cout << "Cреднее арифметическое элементов массива: ";
 				float summa = 0, srednee;
 
@@ -199,6 +223,12 @@ int main()
 				cout << OFFSET << "        Введите размер массива (не больше 100):\n            ";
 				int razm;
 				cin >> razm;
+				while (razm > 100 || razm <= 0)
+				{
+					cout << "Размер массива может быть от 1 до 100!" << endl;
+					cout << "Введите снова: ";
+					cin >> razm;
+				}
 				const int size = 100;
 				float array[size] = { 0 };
 				for (int i = 0; i < razm; i++)
@@ -206,7 +236,7 @@ int main()
 					cout << "Введите элементы массива:\n";
 					cin >> array[i];
 				}
-				cout << OFFSET << "-----------------------\n\n";
+				cout << "-----------------------\n\n";
 				cout << "Минимальное значение в массиве: ";
 
 				for (int i = 0; i < razm; i++)
@@ -217,7 +247,7 @@ int main()
 				cout << array[0];
 				cout << endl;
 				cout << "Максимальное значение в массиве: ";
-				
+
 				for (int i = 0; i < razm; i++)
 				{
 					if (array[0] < array[i])
@@ -243,29 +273,47 @@ int main()
 				cout << OFFSET << "========================================================\n\n";
 				cout << OFFSET << "          Циклический сдвиг \n\n";
 				cout << OFFSET << "======================================================\n\n\n";
-				cout << OFFSET << "          Введите число сдвига :\n         ";
+				cout << "Дан массив из 10 элементов :\n\n";
+				const int size = 10;
+				int array[size] = { 1,2,3,4,5,6,7,8,9,10 };
+
+				for (int i = 0; i < size; i++)
+				{
+					cout << array[i] << " ";
+
+				}
+				cout << "\n" << endl;
+				cout << "Введите число сдвига :\n\n";
 				int sdvig;
 				cin >> sdvig;
-				const int size = 10;
-				int array[size] = {1,2,3,4,5,6,7,8,9,10};
-				float b;
+				cout << "-----------------------\n\n";
+				cout << "Циклический сдвиг на " << sdvig << " элемента(ов):\n\n";
 				for (int i = 0; i < sdvig; i++)
 				{
-					array[0] = array[size-i];
+					array[i] = array[size - sdvig + i];
+
 				}
+
+				int array_1[size] = { 1,2,3,4,5,6,7,8,9,10 };
+
+				for (int i = 1; i < size - sdvig + 1; i++)
+				{
+					array[i + sdvig - 1] = array_1[i - 1];
+				}
+
 
 				for (int i = 0; i < size; i++)
 				{
 					cout << array[i] << " ";
 				}
 
-				cout << endl;
-
-
-			}
-		}
+				cout << "\n" << endl;
 #endif
-		key = _getch();
-    } while (key != 27);
+				
+			}
+			}
+	key = _getch();
+	} while (key != 27);
 	
 }
+	

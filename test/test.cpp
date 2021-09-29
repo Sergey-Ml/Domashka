@@ -14,15 +14,19 @@ int main()
 	}
 	cin >> sdvig;
 	cout << endl;
-	int b;
-
+	
 	for (int i = 0; i < sdvig; i++)
 		{
-			b = array[size - sdvig];
-			array[size - sdvig] = array[i];
-			array[i] = b;
-		}
+				array[i] = array[size-sdvig+i];
 
+	    }
+
+	int array_1[size] = { 1,2,3,4,5,6,7,8,9,10 };
+
+	for (int i = 1; i < size-sdvig+1; i++)
+	{
+		array[i+sdvig-1] = array_1[i-1];
+	}
 	
 
 	for (int i = 0; i < size; i++)
