@@ -4,7 +4,8 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int n, i;
-	float num[100], sum = 0.0, Avg;
+	int num[100];
+	float sum = 0.0, Avg;
 	cout << "Количество элементов массива (не более 100):  ";
 	cin >> n;
 	while (n > 100 || n < 0)
@@ -15,11 +16,11 @@ int main()
 	}
 	for (i = 0; i < n; i++)
 	{
-		cout << i + 1 << ". Введите элемент массива: ";
+		cout << i + 1 << ". Введите "<<i+1<< " - й элемент массива : ";
 		cin >> num[i];
 		sum += num[i];
 	}
 	Avg = sum / n;
-	cout << num[i];
+	cout << num[i] << endl;
 	cout << "Среднее = " << Avg << endl;
 }
