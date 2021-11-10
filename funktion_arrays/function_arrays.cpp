@@ -1,4 +1,4 @@
-ï»¿#include<iostream>
+#include<iostream>
 using namespace std;
 #define OFFSET "\t\t\t\t"
 //int ReservePrint(int n);
@@ -7,36 +7,36 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	cout << OFFSET << "========================================================\n\n";
-	cout << OFFSET << "          ÐŸÑ€Ð¾ÐµÐºÑ‚ Function/Arrays \n\n  ";
+	cout << OFFSET << "          Ïðîåêò Function/Arrays \n\n  ";
 	cout << OFFSET << "========================================================\n\n\n";
-	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð° (Ð½Ðµ Ð±Ð¾Ð»ÑŒÑˆÐµ 100):  ";
+	cout << "Ââåäèòå ðàçìåð ìàññèâà (íå áîëüøå 100):  ";
 	int razm;
 	cin >> razm;
 	cout << endl;
 	while (razm > 100 || razm <= 0)
 	{
-		cout << "Ð Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚ 1 Ð´Ð¾ 100!" << endl;
-		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°: ";
+		cout << "Ðàçìåð ìàññèâà ìîæåò áûòü îò 1 äî 100!" << endl;
+		cout << "Ââåäèòå ñíîâà: ";
 		cin >> razm;
 	}
 	const int size = 100;
 	float array[size] = { 0 };
 	for (int i = 0; i < razm; i++)
 	{
-		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i+1 <<"-Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð° : ";
+		cout << "Ââåäèòå " << i + 1 << "-é ýëåìåíò ìàññèâà : ";
 		cin >> array[i];
 	}
 	cout << "--------------------------------------------\n\n";
-	cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: ";
+	cout << "Ââåäåííûé ìàññèâ: ";
 	for (int i = 0; i < razm; i++)
 	{
-		
+
 		//cout << array[i] << " ";
 	}
 
 	//cout << endl;
 
-	//cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " <<  << endl;
+	//cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " <<  << endl;
 }
 
 /*int ReservePrint(int n)
@@ -44,7 +44,7 @@ int main()
 
 }
 */
- //float Sum(int i, int razm, float array[])
+//float Sum(int i, int razm, float array[])
 //{
 	// float summa=0;
 	 //for (i = 0; i < razm; i++)
@@ -53,4 +53,3 @@ int main()
 	 //}
 	 //return summa;
 //}
-
