@@ -1,42 +1,44 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 #define OFFSET "\t\t\t\t"
 //int ReservePrint(int n);
-//float Sum(int i, int razm, float array[]);
+void Sum(int[]);
+
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	cout << OFFSET << "========================================================\n\n";
-	cout << OFFSET << "          Ïðîåêò Function/Arrays \n\n  ";
+	cout << OFFSET << "          ÐŸÑ€Ð¾ÐµÐºÑ‚ Function/Arrays \n\n  ";
 	cout << OFFSET << "========================================================\n\n\n";
-	cout << "Ââåäèòå ðàçìåð ìàññèâà (íå áîëüøå 100):  ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð° (Ð½Ðµ Ð±Ð¾Ð»ÑŒÑˆÐµ 100):  ";
 	int razm;
 	cin >> razm;
 	cout << endl;
 	while (razm > 100 || razm <= 0)
 	{
-		cout << "Ðàçìåð ìàññèâà ìîæåò áûòü îò 1 äî 100!" << endl;
-		cout << "Ââåäèòå ñíîâà: ";
+		cout << "Ð Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚ 1 Ð´Ð¾ 100!" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°: ";
 		cin >> razm;
 	}
 	const int size = 100;
-	float array[size] = { 0 };
+	int array[size] = { 0 };
 	for (int i = 0; i < razm; i++)
 	{
-		cout << "Ââåäèòå " << i + 1 << "-é ýëåìåíò ìàññèâà : ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i + 1 << "-Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð° : ";
 		cin >> array[i];
 	}
 	cout << "--------------------------------------------\n\n";
-	cout << "Ââåäåííûé ìàññèâ: ";
+	cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: ";
 	for (int i = 0; i < razm; i++)
 	{
 
-		//cout << array[i] << " ";
+		cout << array[i] << " ";
 	}
 
-	//cout << endl;
+	cout << "\n\n";
 
-	//cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " <<  << endl;
+	Sum(array);
 }
 
 /*int ReservePrint(int n)
@@ -44,12 +46,12 @@ int main()
 
 }
 */
-//float Sum(int i, int razm, float array[])
-//{
-	// float summa=0;
-	 //for (i = 0; i < razm; i++)
-	 //{
-		// summa += array[i];
-	 //}
-	 //return summa;
-//}
+void Sum(int arrays[])
+{
+	 int summa=0;
+	 for (int i = 0; i < 100; i++)
+	 {
+		 summa += arrays[i];
+	 }
+	 cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << summa << endl;
+}

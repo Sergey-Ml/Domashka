@@ -1,14 +1,20 @@
 #include<iostream>
-using namespace std;
-void show(int n[]) {
-	for (int i = 0; i < 5; i++)
-		cout << "n [" << i << "]=" << n[i] ;
+	using namespace std;
+	void print(int[]);
+	int main()
+	{
+		int nums[] = { 1,2,3,4,5 };
+		print(nums);
+		return 0;
+	}
 
-}
-
-int main() {
-	int n[5] = { 1,2,3,4,5 };
-	show(n);
-	return 0;
-}
-
+	void print(int numbers[])
+	{
+		int sum = 0;
+		for (int i = 0; i < 5; i++) 
+		{
+			sum += numbers[i];
+			cout << ": " << numbers[i];
+		}
+		cout << ": " << sum;
+	}
