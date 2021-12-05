@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 #define OFFSET "\t\t\t\t"
-void ReversePrint(float arr[], int n);
+//void ReservePrint(float arr[], int n);
 float Sum(float arr[], int n);
 float Avg(float[], int);
 float minValueInt(float[], int);
@@ -22,8 +22,8 @@ int main()
 	cout << "Введите размер массива (не больше 100):  ";
 	int razm;
 	cin >> razm;
-	cout << endl;
-	while (razm > 100 || razm <= 0)
+	cout << endl; 
+	while (razm > 100 || razm <= 0) 
 	{
 		cout << "Размер массива может быть от 1 до 100!" << endl;
 		cout << "Введите снова: ";
@@ -31,6 +31,8 @@ int main()
 	}
 	const int size = 100;
 	float array[size] = { 0 };
+	
+	//массивы для каждой задачи
 	//float reserveprint[size] = { 0 };
 	//float array_rev[size] = { 0 };
 	//float array_min[size] = { 0 };
@@ -38,6 +40,7 @@ int main()
 	//float array_sort[size] = { 0 };
 	//float array_left[size] = { 0 };
 	//float array_right[size] = { 0 };
+	
 	for (int i = 0; i < razm; i++)
 	{
 		cout << "Введите " << i + 1 << "-й элемент массива : ";
@@ -45,6 +48,7 @@ int main()
 	}
 	cout << "--------------------------------------------\n\n";
 	cout << "Введенный массив: ";
+	
 	// Копии массива для каждой изменяем ф-ции
 	//memcpy(array_rev, array, sizeof(array_rev));
 	//memcpy(array_min, array, sizeof(array_min));
@@ -52,30 +56,31 @@ int main()
 	//memcpy(array_sort, array, sizeof(array_sort));
 	//memcpy(array_left, array, sizeof(array_left));
 	//memcpy(array_right, array, sizeof(array_right));
+	
 	for (int i = 0; i < razm; i++)
 	{
 		cout << array[i] << " ";
 	}
-	cout << "\n\n";
-	float reverseprint = ReversePrint(array, razm);
-	cout << "\n\n";
+	//cout << "\n\n";
+	//float reverseprint = ReversePrint(array, razm);
+	//cout << "\n\n";
 	float sum = Sum(array, razm);
-	cout << "\n\n";
+	//cout << "\n\n";
 	float avg = Avg(array, razm);
-	cout << "\n";
+	//cout << "\n";
 	float minvalueint = minValueInt(array, razm);
-	cout << "\n";
+	//cout << "\n";
 	float maxvalueint = maxValueInt(array, razm);
-	cout << "\n";
+	//cout << "\n";
 	//float sort = Sort(array, razm);
 	//cout << "\n";
 	//float shiftleft = ShiftLeft(array, razm);
 	//cout << "\n";
 	//float shiftright = ShiftRight(array, razm);
-	//cout << "\n";
+	cout << "\n";
 
-	cout << "---------ИТОГИ-----------" << endl;
-	cout << "Обратный вывод: " << reverseprint << endl;
+	//cout << "---------ИТОГИ-----------" << endl;
+	//cout << "Обратный вывод: " << reverseprint << endl;
 	cout << "Сумма элементов массива: " << sum << endl;
 	cout << "Среднее арифметическое: " << avg << endl;
 	cout << "Минимальное значение: " << minvalueint << endl;
@@ -92,10 +97,15 @@ int main()
 		cout << array_left[i] << " ; " << endl;
 	}
 	*/
+	cout << "\n\n\n";
+	cout << OFFSET << "======================================================\n\n";
+	cout << OFFSET << "     Домашнее задание № 8 (Функции-Массивы)\n\n";
+	cout << OFFSET << "        (Милькин Сергей, группа СБД121)\n\n";
+	cout << OFFSET << "======================================================\n\n\n";
 }
 
 
-void ReversePrint(float arrays[], int razm)
+/*void ReversePrint(float arrays[], int razm)
 {
 	cout << "Обратный вывод: ";
 	float b = 0; int c = 0; int i;
@@ -112,6 +122,7 @@ void ReversePrint(float arrays[], int razm)
 		cout << c << " + ";
 	}
 }
+*/
 
 float Sum(float array_sum[], int razm)
 {
@@ -157,8 +168,8 @@ float maxValueInt(float array_max[], int razm)
 	//cout << "Максимальное значение: " << max <<endl;
 	return max;
 }
-/*
-float Sort(float array_sort[], int razm)
+
+void Sort(float array_sort[], int razm)
 {
 	cout << "Сортировка по возрастанию: ";
 	for (int i = 0; i < razm; i++)
@@ -216,11 +227,6 @@ float ShiftRight(float array_right[], int razm)
 	{
 		return array_right[i];
 	}
+	*/
+	
 
-	cout << "\n\n\n";
-	cout << OFFSET << "======================================================\n\n";
-	cout << OFFSET << "     Домашнее задание № 8 (Функции-Массивы)\n\n";
-	cout << OFFSET << "        (Милькин Сергей, группа СБД121)\n\n";
-	cout << OFFSET << "======================================================\n\n\n";
-}
-*/
