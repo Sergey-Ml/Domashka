@@ -1,20 +1,20 @@
 #include<iostream>
 	using namespace std;
-	void print(int[]);
 	int main()
 	{
-		int nums[] = { 1,2,3,4,5 };
-		print(nums);
-		return 0;
-	}
-
-	void print(int numbers[])
-	{
-		int sum = 0;
-		for (int i = 0; i < 5; i++) 
+		int n = 10;
+		int arrays[10] = { 1,2,3,4,5,6,7,8,9,10};
+		int x = arrays[0];
+		for (int i = 0; i < n - 1; i++)
 		{
-			sum += numbers[i];
-			cout << ": " << numbers[i];
+			arrays[i] = arrays[i + 1];
 		}
-		cout << ": " << sum;
-	}
+		arrays[n - 1] = x;
+		cout << "Влево:  " << endl;
+		for (int i = 0; i < n; i++)
+		{
+			cout << arrays[i];
+		}
+		
+		
+}
