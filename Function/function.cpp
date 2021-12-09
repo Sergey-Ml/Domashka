@@ -1,15 +1,15 @@
-#include<iostream>
-#include<string.h>
+п»ї#include<iostream>
+#include<iomanip>
 using namespace std;
 #define OFFSET "\t\t\t\t"
-//void ReservePrint(float arr[], int n);
+float ReversePrint(float arr[], int n);
 float Sum(float arr[], int n);
-float Avg(float[], int);
-float minValueInt(float[], int);
-float maxValueInt(float[], int);
-//float Sort(float[], int);
-//float ShiftLeft(float[], int);
-//float ShiftRight(float[], int);
+float Avg(float arr[], int n);
+float minValueInt(float arr[], int n);
+float maxValueInt(float arr[], int n);
+float Sort(float arr[], int n);
+float ShiftLeft(float arr[], int n, int sdvig_l);
+float ShiftRight(float arr[], int n, int sdvig_p);
 
 
 
@@ -17,52 +17,59 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	cout << OFFSET << "========================================================\n\n";
-	cout << OFFSET << "          Проект Function/Arrays \n\n  ";
+	cout << OFFSET << "             РџСЂРѕРµРєС‚ Function/Arrays \n\n  ";
 	cout << OFFSET << "========================================================\n\n\n";
-	cout << "Введите размер массива (не больше 100):  ";
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° (РЅРµ Р±РѕР»СЊС€Рµ 100):  ";
 	int razm;
 	cin >> razm;
 	cout << endl; 
 	while (razm > 100 || razm <= 0) 
 	{
-		cout << "Размер массива может быть от 1 до 100!" << endl;
-		cout << "Введите снова: ";
+		cout << "Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚ 1 РґРѕ 100!" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ СЃРЅРѕРІР°: ";
 		cin >> razm;
 	}
 	const int size = 100;
 	float array[size] = { 0 };
 	
-	//массивы для каждой задачи
-	//float reserveprint[size] = { 0 };
-	//float array_rev[size] = { 0 };
-	//float array_min[size] = { 0 };
-	//float array_max[size] = { 0 };
-	//float array_sort[size] = { 0 };
-	//float array_left[size] = { 0 };
-	//float array_right[size] = { 0 };
+	//РјР°СЃСЃРёРІС‹ РґР»СЏ Р·Р°РґР°С‡, РјРµРЅСЏСЋС‰РёС… РёР·РЅР°С‡Р°Р»СЊРЅС‹Р№
+	float array_rev[size] = { 0 };
+	float array_sort[size] = { 0 };
+	float array_left[size] = { 0 };
+	float array_right[size] = { 0 };
 	
 	for (int i = 0; i < razm; i++)
 	{
-		cout << "Введите " << i + 1 << "-й элемент массива : ";
+		cout << "Р’РІРµРґРёС‚Рµ " << i + 1 << "-Р№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° : ";
 		cin >> array[i];
 	}
-	cout << "--------------------------------------------\n\n";
-	cout << "Введенный массив: ";
+	cout << setw(30) << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ СЃРґРІРёРіР° РІР»РµРІРѕ: ";
+	int sdvig_p;
+	cin >> sdvig_p;
+
+	cout << setw(30) << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ СЃРґРІРёРіР° РІРїСЂР°РІРѕ: ";
+	int sdvig_l;
+	cin >> sdvig_l;
 	
-	// Копии массива для каждой изменяем ф-ции
-	//memcpy(array_rev, array, sizeof(array_rev));
-	//memcpy(array_min, array, sizeof(array_min));
-	//memcpy(array_max, array, sizeof(array_max));
-	//memcpy(array_sort, array, sizeof(array_sort));
-	//memcpy(array_left, array, sizeof(array_left));
-	//memcpy(array_right, array, sizeof(array_right));
+	cout << "--------------------------------------------\n\n";
+
+
+	cout << setw(30)<<"Р’РІРµРґРµРЅРЅС‹Р№ РјР°СЃСЃРёРІ: ";
+
+	// РљРѕРїРёРё РјР°СЃСЃРёРІР° РґР»СЏ РєР°Р¶РґРѕР№ РёР·РјРµРЅСЏРµРј С„-С†РёРё
+	memcpy(array_rev, array, sizeof(array_rev));
+	memcpy(array_sort, array, sizeof(array_sort));
+	memcpy(array_left, array, sizeof(array_left));
+	memcpy(array_right, array, sizeof(array_right));
 	
 	for (int i = 0; i < razm; i++)
 	{
 		cout << array[i] << " ";
 	}
-	//cout << "\n\n";
-	//float reverseprint = ReversePrint(array, razm);
+	cout << endl;
+	
+
+	float reverseprint = ReversePrint(array, razm);
 	//cout << "\n\n";
 	float sum = Sum(array, razm);
 	//cout << "\n\n";
@@ -72,42 +79,29 @@ int main()
 	//cout << "\n";
 	float maxvalueint = maxValueInt(array, razm);
 	//cout << "\n";
-	//float sort = Sort(array, razm);
+	float sort = Sort(array_sort, razm);
 	//cout << "\n";
-	//float shiftleft = ShiftLeft(array, razm);
+	float shiftleft = ShiftLeft(array_left, razm, sdvig_l);
 	//cout << "\n";
-	//float shiftright = ShiftRight(array, razm);
+	float shiftright = ShiftRight(array_right, razm,sdvig_p);
 	cout << "\n";
 
-	//cout << "---------ИТОГИ-----------" << endl;
-	//cout << "Обратный вывод: " << reverseprint << endl;
-	cout << "Сумма элементов массива: " << sum << endl;
-	cout << "Среднее арифметическое: " << avg << endl;
-	cout << "Минимальное значение: " << minvalueint << endl;
-	cout << "Максимальное значение: " << maxvalueint << endl;
-	//cout << "Сортировка: " << sort;
-	//cout << "Сдвиг влево: " << shiftleft;
-	//cout << "Сдвин вправо: " << shiftright;
+	cout << setw(30) << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << sum << endl;
+	cout << setw(30) << "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ: " << avg << endl;
+	cout << setw(30) << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << minvalueint << endl;
+	cout << setw(30) << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << maxvalueint << endl;
 
-
-	// Проверка массива
-
-	/*for (int i = 0; i < razm; i++)
-	{
-		cout << array_left[i] << " ; " << endl;
-	}
-	*/
-	cout << "\n\n\n";
+	cout << "\n\n\n\n\n";
 	cout << OFFSET << "======================================================\n\n";
-	cout << OFFSET << "     Домашнее задание № 8 (Функции-Массивы)\n\n";
-	cout << OFFSET << "        (Милькин Сергей, группа СБД121)\n\n";
+	cout << OFFSET << "     Р”РѕРјР°С€РЅРµРµ Р·Р°РґР°РЅРёРµ N8 (Р¤СѓРЅРєС†РёРё-РњР°СЃСЃРёРІС‹)\n\n";
+	cout << OFFSET << "        (РњРёР»СЊРєРёРЅ РЎРµСЂРіРµР№, РіСЂСѓРїРїР° РЎР‘Р”121)\n\n";
 	cout << OFFSET << "======================================================\n\n\n";
 }
 
 
-/*void ReversePrint(float arrays[], int razm)
+float ReversePrint(float arrays[], int razm)
 {
-	cout << "Обратный вывод: ";
+	cout << setw(30) << "РћР±СЂР°С‚РЅС‹Р№ РІС‹РІРѕРґ: ";
 	float b = 0; int c = 0; int i;
 	for (int i = 0; i < (razm / 2); i++)
 	{
@@ -119,10 +113,12 @@ int main()
 	for (i = 0; i < razm; i++)
 	{
 		c = arrays[i];
-		cout << c << " + ";
+		cout << c << " ";
 	}
+	cout << endl;
+	return 0;
 }
-*/
+
 
 float Sum(float array_sum[], int razm)
 {
@@ -131,7 +127,7 @@ float Sum(float array_sum[], int razm)
 	{
 		summa += array_sum[i];
 	}
-	//cout << "Сумма элементов массива: " << summa;
+	//cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << summa;
 	return summa;
 }
 float Avg(float array_avg[], int razm)
@@ -143,7 +139,7 @@ float Avg(float array_avg[], int razm)
 	}
 	srednee = summa / razm;
 	return srednee;
-	//cout << "Среднее арифметическое элементов массива: " << srednee << endl;
+	//cout << "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << srednee << endl;
 }
 float minValueInt(float array_min[], int razm)
 {
@@ -153,7 +149,7 @@ float minValueInt(float array_min[], int razm)
 		if (min > array_min[i])
 			min = array_min[i];
 	}
-	//cout << "Минимальное значение: " << min << endl;
+	//cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << min << endl;
 	return min;
 }
 float maxValueInt(float array_max[], int razm)
@@ -165,13 +161,13 @@ float maxValueInt(float array_max[], int razm)
 		if (max < array_max[i])
 			max = array_max[i];
 	}
-	//cout << "Максимальное значение: " << max <<endl;
+	//cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << max <<endl;
 	return max;
 }
 
-void Sort(float array_sort[], int razm)
+float Sort(float array_sort[], int razm)
 {
-	cout << "Сортировка по возрастанию: ";
+	cout << setw(30) << "РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ: ";
 	for (int i = 0; i < razm; i++)
 	{
 		int min = i;
@@ -183,17 +179,15 @@ void Sort(float array_sort[], int razm)
 		float tmp_sort = array_sort[i];
 		array_sort[i] = array_sort[min];
 		array_sort[min] = tmp_sort;
-		return array_sort[i];
+		cout << array_sort[i]<< " ";
 	}
-	cout << endl;
+		cout << endl;
+	return 0;
 }
-float ShiftLeft(float array_left[], int razm)
+float ShiftLeft(float array_left[], int razm, int sdvig_l)
 {
-	cout << "Введите число сдвига влево:\n\n";
-	int sdvig;
-	cin >> sdvig;
-	cout << "Циклический сдвиг на " << sdvig << " элемента(ов) влево:\n\n";
-	for (int j = 1; j <= sdvig; ++j)
+	cout << setw(30) << "Р¦РёРєР»РёС‡РµСЃРєРёР№ СЃРґРІРёРі РІР»РµРІРѕ: ";
+	for (int j = 1; j <= sdvig_l; ++j)
 	{
 		float x = array_left[0];
 		for (int i = 0; i < razm - 1; i++)
@@ -204,29 +198,28 @@ float ShiftLeft(float array_left[], int razm)
 	}
 	for (int i = 0; i < razm; i++)
 	{
-		return array_left[i];
+	 cout << array_left[i]<< " ";
 	}
 	cout << endl;
+	return 0;
 }
-float ShiftRight(float array_right[], int razm)
+float ShiftRight(float array_right[], int razm, int sdvig_p)
 {
-	cout << "Введите число сдвига вправо:\n\n";
-	int sdvig;
-	cin >> sdvig;
-	cout << "Циклический сдвиг на " << sdvig << " элемента(ов) вправо: \n\n";
-	for (int j = 1; j <=sdvig; j++)
+	cout << setw(30) << "Р¦РёРєР»РёС‡РµСЃРєРёР№ СЃРґРІРёРі РІРїСЂР°РІРѕ: ";
+	for (int j = 1; j <= sdvig_p; j++)
 	{
-		float x = array_right[razm-1];
-		for (int i = razm-1; i >=0; i--)
+		float x = array_right[razm - 1];
+		for (int i = razm - 1; i >= 0; i--)
 		{
-			array_right[i+1] = array_right[i];
+			array_right[i + 1] = array_right[i];
 		}
 		array_right[0] = x;
 	}
 	for (int i = 0; i < razm; i++)
 	{
-		return array_right[i];
+		cout << array_right[i] << " ";
 	}
-	*/
-	
+	return 0;
+	cout << endl;
+}
 
