@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 #define Zvezdochki_0
 //#define Zvezdochki_1
@@ -11,56 +11,56 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Russian");
 #ifdef Zvezdochki_0
-	int zvezdochki; //Кол-во звездочек
-	cout << "Введите кол-во звездочек: ";
+	int zvezdochki; //РљРѕР»-РІРѕ Р·РІРµР·РґРѕС‡РµРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ Р·РІРµР·РґРѕС‡РµРє: ";
 	cin >> zvezdochki;
-	int stroki; //Кол-во строк
-	cout << "Введите кол - во строк: ";
+	int stroki; //РљРѕР»-РІРѕ СЃС‚СЂРѕРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР» - РІРѕ СЃС‚СЂРѕРє: ";
 	cin >> stroki;
 	for (int i = 1; i <= stroki; i++)
 	{
 		for (int j = 1; j <= zvezdochki; j++)
 		{
-			cout << " * "; // вывод звездочки в ряд, если endl; - в столби
+			cout << " * "; // РІС‹РІРѕРґ Р·РІРµР·РґРѕС‡РєРё РІ СЂСЏРґ, РµСЃР»Рё endl; - РІ СЃС‚РѕР»Р±Рё
 		}
 		cout << "\n\n";
 	}
 #endif
 #ifdef Zvezdochki_1
-	int stroki; //Кол-во строк
-	cout << "Введите кол - во строк: ";
+	int stroki; //РљРѕР»-РІРѕ СЃС‚СЂРѕРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР» - РІРѕ СЃС‚СЂРѕРє: ";
 	cin >> stroki;
 	for (int i = 1; i <= stroki; i++)
 	{
 		for (int j = 1; j <= i; j++)
 		{
-			cout << " * "; // вывод звездочки в ряд, если endl; - в столби
+			cout << " * "; // РІС‹РІРѕРґ Р·РІРµР·РґРѕС‡РєРё РІ СЂСЏРґ, РµСЃР»Рё endl; - РІ СЃС‚РѕР»Р±Рё
 		}
 		cout << "\n\n";
 	}
 #endif // 
 #ifdef Zvezdochki_2
-	int stroki; //Кол-во строк
-	cout << "Введите кол - во строк: ";
+	int stroki; //РљРѕР»-РІРѕ СЃС‚СЂРѕРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР» - РІРѕ СЃС‚СЂРѕРє: ";
 	cin >> stroki;
 	for (int i = 1; i <= stroki; i++)
 	{
 		for (int j = 0; j <= stroki - i; ++j)
 		{
-			cout << " * "; // вывод звездочки в ряд, если endl; - в столби
+			cout << " * "; // РІС‹РІРѕРґ Р·РІРµР·РґРѕС‡РєРё РІ СЂСЏРґ, РµСЃР»Рё endl; - РІ СЃС‚РѕР»Р±Рё
 		}
 		cout << "\n\n";
 	}
 #endif //
 #ifdef Zvezdochki_3
-	int stroki; //Кол-во строк
-	cout << "Введите кол - во строк: ";
+	int stroki; //РљРѕР»-РІРѕ СЃС‚СЂРѕРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР» - РІРѕ СЃС‚СЂРѕРє: ";
 	cin >> stroki;
 	for (int i = 1; i <= stroki; i++)
 	{
 		for (int j = 1; j <= i; j++)
 		{
-			cout << "   "; // вывод пробела
+			cout << "   "; // РІС‹РІРѕРґ РїСЂРѕР±РµР»Р°
 			
 		}
 		for (int y = i; y <= stroki; y++)
@@ -70,14 +70,14 @@ int main() {
 
 #endif // 
 #ifdef Zvezdochki_4
-	int stroki; //Кол-во строк
-	cout << "Введите кол - во строк: ";
+	int stroki; //РљРѕР»-РІРѕ СЃС‚СЂРѕРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР» - РІРѕ СЃС‚СЂРѕРє: ";
 	cin >> stroki;
 	for (int i = 1; i <= stroki; i++)
 	{
 		for (int j = 1; j <= stroki - i; j++)
 		{
-			cout << "   "; // вывод пробела
+			cout << "   "; // РІС‹РІРѕРґ РїСЂРѕР±РµР»Р°
 		}
 		for (int y = 1; y <= i; y++)
 			cout << " * ";
@@ -86,8 +86,8 @@ int main() {
 
 #endif // 
 #ifdef Romb
-	int stroki; //Кол-во строк
-	cout << "Введите кол - во строк: ";
+	int stroki; //РљРѕР»-РІРѕ СЃС‚СЂРѕРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР» - РІРѕ СЃС‚СЂРѕРє: ";
 	cin >> stroki;
 	for (int i = 0; i < stroki; i++)
 	{
@@ -108,7 +108,7 @@ int main() {
 	{
 		for (int j = 0; j <= i; j++)
 		{
-			cout << " "; // вывод пробела
+			cout << " "; // РІС‹РІРѕРґ РїСЂРѕР±РµР»Р°
 		}
 		cout << "\\";
 		for (int j = (i + 1) * 2; j < stroki * 2; j++)
@@ -121,18 +121,18 @@ int main() {
 #endif //
 #ifdef Plus_Minus
 	int stroki, i, j;
-	cout << "Введите кол - во строк: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР» - РІРѕ СЃС‚СЂРѕРє: ";
 	cin >> stroki;
 	for (i = 1; i <= stroki; i++)
 	{
 		for (j = 1; j <= stroki; j++)
 		{
 			if ((i + j) % 2 == 0) {
-				cout << " + "; // вывод пробела
+				cout << " + "; // РІС‹РІРѕРґ РїСЂРѕР±РµР»Р°
 				//cout << " - ";
 			}
 			else {
-				cout << " - "; // вывод пробела
+				cout << " - "; // РІС‹РІРѕРґ РїСЂРѕР±РµР»Р°
 				//cout << " + ";
 			}
 		}
