@@ -3,9 +3,10 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Russian");
 	int razmer, i, j, k, x;
-	cout << "Введите размер доски :\n";
+	cout << "Введите размер доски :";
+	
 	cin >> razmer;
-
+	cout << endl;
 	for (k = 0; k < razmer; k++)
 	{
 		for (i = 0; i < razmer; i++) //строки
