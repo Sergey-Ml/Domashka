@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-//#define Zvezdochki_0
+#define Zvezdochki_0
 //#define Zvezdochki_1
 //#define Zvezdochki_2
 //#define Zvezdochki_3
 //#define Zvezdochki_4
 //#define Romb
-#define Plus_Minus
+//#define Plus_Minus
 
 int main() {
 	setlocale(LC_ALL, "Russian");
@@ -56,11 +56,12 @@ int main() {
 	int stroki; //Кол-во строк
 	cout << "Введите кол - во строк: ";
 	cin >> stroki;
-	for (int i = 0; i <= stroki; i++)
+	for (int i = 1; i <= stroki; i++)
 	{
-		for (int j = 0; j <= i; j++)
+		for (int j = 1; j <= i; j++)
 		{
 			cout << "   "; // вывод пробела
+			
 		}
 		for (int y = i; y <= stroki; y++)
 			cout << " * ";
