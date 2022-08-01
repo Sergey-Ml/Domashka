@@ -3,8 +3,9 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Russian");
 	int razmer, i, j, k, x;
-	cout << "Введите размер (четное число): \n";
+	cout << "Введите размер (четное число): ";
 	cin >> razmer;
+	cout << endl;
 	while (razmer % 2 != 0)
 	{
 		razmer = razmer + 1;
