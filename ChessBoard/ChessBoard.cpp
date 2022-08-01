@@ -1,9 +1,10 @@
 ﻿#include<iostream>
 using namespace std;
 int main() {
-	//setlocale(LC_ALL, "Russian");
+	setlocale(LC_ALL, "Russian");
 	int razmer, i, j;
-	cout << "Vvedite razmer doski ne bolee 30: \n";
+	cout << "Введите размер доски не более 30: ";
+	setlocale(LC_ALL, "C");
 	cin >> razmer;
 	cout << "\n\n";
 	while (razmer > 30)
@@ -14,8 +15,10 @@ int main() {
 	{
 		razmer = razmer + 1;
 	}
-	cout << " Tut v planah byli shahmatnye figury,\n";
-	cout << " no ne pobedil Unicode, a v ASCII ih net \n\n";
+	setlocale(LC_ALL, "Russian");
+	cout << " Тут в планах были шахматные фигуры,\n";
+	cout << " но не победил Unicode, a в ASCII их нет(( \n\n";
+	setlocale(LC_ALL, "C");
 	cout << "  ";
 	cout << "   "; //сдвиг верх строки букв
 	for (char lit = 97; lit <= razmer + 96; lit++)
@@ -68,11 +71,12 @@ int main() {
 	for (char lit = 97; lit <= razmer + 96; lit++)
 		cout << " " << lit;
 	cout << "\n";
-	cout << "     Tut tozhe... s russkim vyshla zasada\n";
-	cout << " pri vkluchenii Russian doska prevrachaetsya \n";
-	cout << "v nabor bukv, vybor razmera kratnogo 2 obuslovlen\n";
-	cout << "krasotoy doski: odin kvadratik - dva simvola\n";
-	cout << "zato if-for-while vyuchil!!!";
+	setlocale(LC_ALL, "Russian");
+	cout << "     Тут тоже... с русским вышла засада\n";
+	cout << " при включении Russian доска переключается \n";
+	cout << "в набор букв, поэтому понатыкал setlocale,\n";
+	cout << "выбор размера кратного двум обусловлен \n";
+	cout << "красотой доски: один квадратик - два символа";
 	//cout << "\u2658"; //КАК МНЕ ВЫВЕСТИ ШАХМАТНЫЕ ФИГУРКИ ??????!!!!!
 	cout << "\n\n\n\n\n\n";
 }
