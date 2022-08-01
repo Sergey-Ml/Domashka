@@ -3,8 +3,9 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Russian");
 	int razmer, i, j, k, x;
-	cout << "Введите размер: \n";
+	cout << "Введите размер: ";
 	cin >> razmer;
+	cout << endl;
 	cout << "   "; //сдвиг верхней оконтовки
 	setlocale(LC_ALL, "C");
 	cout << char(201);
